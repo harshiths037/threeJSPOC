@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom'
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from 'react-three-fiber'
 
-function App(props) {
+function Box(props) {
   // This reference will give us direct access to the mesh
   const mesh = useRef()
 
@@ -29,14 +29,17 @@ function App(props) {
   )
 }
 
-ReactDOM.render(
+
+ const App=()=>{
+return(
   <Canvas>
     <ambientLight />
     <pointLight position={[10, 10, 10]} />
     <Box position={[-1.2, 0, 0]} />
     <Box position={[1.2, 0, 0]} />
-  </Canvas>,
-  document.getElementById('root')
+  </Canvas>
 )
+}
+
 
 export default App;
